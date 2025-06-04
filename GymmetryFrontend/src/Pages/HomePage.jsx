@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Dumbbell, MoveRight, Plus } from "lucide-react";
 import Navbar from "../Components/Navbar";
-import Section2 from "../Sections/section2";
+import Section2 from "../Sections/Section2";
 
 function HomePage() {
   return (
