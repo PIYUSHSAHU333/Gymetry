@@ -185,7 +185,7 @@ const Navbar = () => {
                 {userName}
               </p>
               <ChevronDown
-                className={` text-gray-500 w-4 h-4 ${
+                className={` text-white w-4 h-4 ${
                   profileDropdownOpen ? "rotate-180" : ""
                 } transition-transform duration-300`}
               />
@@ -197,7 +197,7 @@ const Navbar = () => {
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
-                  className="absolute cursor-pointer top-full w-72 mt-2 right-0 bg-white shadow-lg rounded-lg p-2"
+                  className="absolute cursor-pointer top-full w-72 mt-2 right-0 bg-white shadow-black shadow-lg rounded-lg p-2"
                 >
                   <div className="flex items-center p-4  w-fit flex-col gap-4">
                     <div className="flex items-center gap-2">

@@ -1,3 +1,23 @@
 @import "tailwindcss";
 
+/* Custom Scrollbar Styles */
+
+::-webkit-scrollbar {
+  width: 8px; /* Decrease width */
+}
+
+::-webkit-scrollbar-track {
+  background: #2d3748; /* Dark background for track, adjust if needed */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #e4ff4f; /* Scrollbar thumb color */
+  border-radius: 4px; /* Rounded corners */
+}
+
+/* Optional: Style for scrollbar corner */
+::-webkit-scrollbar-corner {
+  background: #2d3748; /* Match track color */
+}
+
 
