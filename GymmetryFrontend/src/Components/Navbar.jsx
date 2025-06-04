@@ -17,7 +17,21 @@ const Navbar = () => {
   const fileInputRef = useRef(null);
   const dropdownRef = useRef(null);
   const [scrolled, setScrolled] = useState(false);
+  const [showShadow, setShowShadow] = useState(false);
   const [profileDropdownOpen, setProfileDropdownOpen] = useState(false);
+
+  useEffect(() => {
+    if (scrolled) {
+      setShowShadow(true);
+    } else {
+      const handler = setTimeout(() => {
+        setShowShadow(false);
+      }, 200);
+
+      return () => clearTimeout(handler);
+    }
+  }, [scrolled]);
+
   useEffect(() => {
     const handleStorageChange = () => {
       const savedPicture = localStorage.getItem("profilePicture");
@@ -34,12 +48,9 @@ const Navbar = () => {
 
     const handleScroll = () => {
       const offset = window.scrollY;
-      if (offset > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(offset > 50);
     };
+
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setProfileDropdownOpen(false);
@@ -114,7 +125,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`top-0  mt-3 border-amber-50 rounded-full w-8/10 mx-auto  left-0 right-0 z-50 py-3 px-1 transition-all duration-300 `}
+      className={`top-0  mt-3 border-amber-50 rounded-full w-8/10 mx-auto  left-0 right-0 z-50 py-3 px-1  transition-all duration-300 ${showShadow ? "shadow-md shadow-[#E4FF4F]" : ""}`}
     >
       <div className="flex items-center mx-auto justify-between">
         <Link to="/" className="flex items-center gap-3 group">
