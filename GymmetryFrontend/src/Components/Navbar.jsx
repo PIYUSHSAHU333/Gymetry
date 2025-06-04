@@ -114,7 +114,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`top-0  mt-3 border-amber-50 rounded-full w-8/10 mx-auto  left-0 right-0 z-50 py-3 px-4 transition-all duration-300 `}
+      className={`top-0  mt-3 border-amber-50 rounded-full w-8/10 mx-auto  left-0 right-0 z-50 py-3 px-1 transition-all duration-300 `}
     >
       <div className="flex items-center mx-auto justify-between">
         <Link to="/" className="flex items-center gap-3 group">
@@ -209,7 +209,7 @@ const Navbar = () => {
                         />
                         <button
                           onClick={triggerFileInput}
-                          className="absolute inset-0 flex  items-center justify-center opacity-0 bg-black/50 rounded-full group-hover:opacity-100 transition-opacity opa duration-300 w-full h-full border-[#E4FF4F]"
+                          className="absolute inset-0 flex  cursor-pointer items-center justify-center opacity-0 bg-black/50 rounded-full group-hover:opacity-100 transition-opacity opa duration-300 w-full h-full border-[#E4FF4F]"
                         >
                           <Camera className="w-5 h-5 text-black" />
                         </button>
